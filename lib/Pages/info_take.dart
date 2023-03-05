@@ -12,8 +12,6 @@ class InfoTake extends StatefulWidget {
 }
 
 class _InfoTakeState extends State<InfoTake> {
-  final _formKey = GlobalKey<FormState>();
-  final _formData = <String, dynamic>{};
   late String _gender = "";
   late String Tremor = "";
   late String Bradykinesia = "";
@@ -98,94 +96,134 @@ class _InfoTakeState extends State<InfoTake> {
               color: Colors.black,
             ),
             const SizedBox(height: 15.0),
-            const Text('Tremor check'),
-            ListTile(
-              title: const Text("yes"),
-              leading: Radio(
-                value: "yes",
-                groupValue: Tremor,
-                onChanged: (value) {
-                  setState(() {
-                    Tremor = value!;
-                  });
-                },
-              ),
-            ),
-            ListTile(
-              title: const Text("no"),
-              leading: Radio(
-                value: "no",
-                groupValue: Tremor,
-                onChanged: (value) {
-                  setState(() {
-                    Tremor = value!;
-                  });
-                },
-              ),
+            Row(
+              children: [
+                const Text('Tremor check'),
+                Expanded(
+                  child: SizedBox(
+                    height: 60.0,
+                    child: ListTile(
+                      title: const Text("yes"),
+                      leading: Radio(
+                        value: "yes",
+                        groupValue: Tremor,
+                        onChanged: (value) {
+                          setState(() {
+                            Tremor = value!;
+                          });
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    child: ListTile(
+                      title: const Text("no"),
+                      leading: Radio(
+                        value: "no",
+                        groupValue: Tremor,
+                        onChanged: (value) {
+                          setState(() {
+                            Tremor = value!;
+                          });
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
             const SizedBox(height: 10.0),
             const Divider(
               color: Colors.black,
             ),
             const SizedBox(height: 15.0),
-            const Text('Bradykinesia check'),
-            const SizedBox(height: 16.0),
-            ListTile(
-              title: const Text("yes"),
-              leading: Radio(
-                value: "yes",
-                groupValue: Bradykinesia,
-                onChanged: (value) {
-                  setState(() {
-                    Bradykinesia = value!;
-                  });
-                },
-              ),
-            ),
-            ListTile(
-              title: const Text("no"),
-              leading: Radio(
-                value: "no",
-                groupValue: Bradykinesia,
-                onChanged: (value) {
-                  setState(() {
-                    Bradykinesia = value!;
-                  });
-                },
-              ),
+            Row(
+              children: [
+                const Text('Bradykinesia check'),
+                const SizedBox(height: 16.0),
+                Expanded(
+                  child: SizedBox(
+                    height: 60.0,
+                    child: ListTile(
+                      title: const Text("yes"),
+                      leading: Radio(
+                        value: "yes",
+                        groupValue: Bradykinesia,
+                        onChanged: (value) {
+                          setState(() {
+                            Bradykinesia = value!;
+                          });
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    height: 60.0,
+                    child: ListTile(
+                      title: const Text("no"),
+                      leading: Radio(
+                        value: "no",
+                        groupValue: Bradykinesia,
+                        onChanged: (value) {
+                          setState(() {
+                            Bradykinesia = value!;
+                          });
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
             const SizedBox(height: 15.0),
             const Divider(
               color: Colors.black,
             ),
             const SizedBox(height: 15.0),
-            const Text('Dyskinesia check'),
-            const SizedBox(height: 16.0),
-            ListTile(
-              title: const Text("yes"),
-              leading: Radio(
-                value: "yes",
-                groupValue: Dyskinesia,
-                onChanged: (value) {
-                  setState(() {
-                    Dyskinesia = value!;
-                  });
-                },
-              ),
+            Row(
+              children: [
+                const Text('Dyskinesia check'),
+                const SizedBox(height: 16.0),
+                Expanded(
+                  child: SizedBox(
+                    height: 60.0,
+                    child: ListTile(
+                      title: const Text("yes"),
+                      leading: Radio(
+                        value: "yes",
+                        groupValue: Dyskinesia,
+                        onChanged: (value) {
+                          setState(() {
+                            Dyskinesia = value!;
+                          });
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    height: 60.0,
+                    child: ListTile(
+                      title: const Text("no"),
+                      leading: Radio(
+                        value: "no",
+                        groupValue: Dyskinesia,
+                        onChanged: (value) {
+                          setState(() {
+                            Dyskinesia = value!;
+                          });
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
-            ListTile(
-              title: const Text("no"),
-              leading: Radio(
-                value: "no",
-                groupValue: Dyskinesia,
-                onChanged: (value) {
-                  setState(() {
-                    Dyskinesia = value!;
-                  });
-                },
-              ),
-            ),
-            const SizedBox(height: 16.0),
           ],
         ),
       ),
