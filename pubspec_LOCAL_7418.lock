@@ -6,7 +6,6 @@ packages:
     description:
       name: _flutterfire_internals
 <<<<<<< HEAD
-<<<<<<< HEAD
       sha256: "2f428053492f92303e42c9afa8e3a78ad1886760e7b594e2b5a6b6ee47376360"
       url: "https://pub.dev"
     source: hosted
@@ -17,12 +16,6 @@ packages:
     source: hosted
     version: "1.0.16"
 >>>>>>> origin
-=======
-      sha256: "64fcb0dbca4386356386c085142fa6e79c00a3326ceaa778a2d25f5d9ba61441"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.16"
->>>>>>> origin/master
   async:
     dependency: transitive
     description:
@@ -56,10 +49,7 @@ packages:
     source: hosted
     version: "1.1.1"
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/master
   cloud_firestore:
     dependency: "direct main"
     description:
@@ -68,52 +58,37 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.4.3"
-<<<<<<< HEAD
 >>>>>>> origin
-=======
->>>>>>> origin/master
   cloud_firestore_platform_interface:
     dependency: transitive
     description:
       name: cloud_firestore_platform_interface
-<<<<<<< HEAD
 <<<<<<< HEAD
       sha256: d023142c18c28b2610c23c196e829c96976569cc2aa2f8e45328ae8a64c428d1
       url: "https://pub.dev"
     source: hosted
     version: "5.7.7"
 =======
-=======
->>>>>>> origin/master
       sha256: "43ccae09f7e0c82752e69c251c6dc5efcdff4ddcfc09564175a28657bbd74188"
       url: "https://pub.dev"
     source: hosted
     version: "5.11.3"
-<<<<<<< HEAD
 >>>>>>> origin
-=======
->>>>>>> origin/master
   cloud_firestore_web:
     dependency: transitive
     description:
       name: cloud_firestore_web
-<<<<<<< HEAD
 <<<<<<< HEAD
       sha256: "3d7d4fa8c1dc5a1f7cb33985ae0ab9924d33d76d4959fe26aed84b7d282887e3"
       url: "https://pub.dev"
     source: hosted
     version: "2.8.10"
 =======
-=======
->>>>>>> origin/master
       sha256: e054c007217e28e07179bbae0564c2a4f6338a60bddb0c139e4834e953f4b95c
       url: "https://pub.dev"
     source: hosted
     version: "3.3.3"
-<<<<<<< HEAD
 >>>>>>> origin
-=======
->>>>>>> origin/master
   collection:
     dependency: transitive
     description:
@@ -167,7 +142,6 @@ packages:
     description:
       name: firebase_core
 <<<<<<< HEAD
-<<<<<<< HEAD
       sha256: "4f1d7c13a909e82ff026679c9b8493cdeb35a9c76bc46c42bf9e2240c9e57e80"
       url: "https://pub.dev"
     source: hosted
@@ -178,12 +152,6 @@ packages:
     source: hosted
     version: "2.7.0"
 >>>>>>> origin
-=======
-      sha256: fe30ac230f12f8836bb97e6e09197340d3c584526825b1746ea362a82e1e43f7
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.7.0"
->>>>>>> origin/master
   firebase_core_platform_interface:
     dependency: transitive
     description:
@@ -196,7 +164,6 @@ packages:
     dependency: transitive
     description:
       name: firebase_core_web
-<<<<<<< HEAD
 <<<<<<< HEAD
       sha256: "839f1b48032a61962792cea1225fae030d4f27163867f181d6d2072dd40acbee"
       url: "https://pub.dev"
@@ -232,12 +199,6 @@ packages:
     source: hosted
     version: "2.2.1"
 >>>>>>> origin
-=======
-      sha256: "291fbcace608aca6c860652e1358ef89752be8cc3ef227f8bbcd1e62775b833a"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.2.1"
->>>>>>> origin/master
   flutter:
     dependency: "direct main"
     description: flutter
