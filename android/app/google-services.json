@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "399259082512",
+    "project_id": "track-pd",
+    "storage_bucket": "track-pd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399259082512:android:eaa34248d92a1071f00f95",
+        "android_client_info": {
+          "package_name": "at.Ibrahim.Track_PD"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399259082512-6p1c0nh73ot7lq0m5laplgglc1pbc8bb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTUnCDsvBHlf_q1Jnz1cqp_VP5linq-G0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399259082512-6p1c0nh73ot7lq0m5laplgglc1pbc8bb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
