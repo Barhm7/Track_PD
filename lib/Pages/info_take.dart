@@ -4,6 +4,7 @@ import 'package:new_fluttter/componets/my_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:new_fluttter/componets/fieled.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:new_fluttter/Pages/activity.dart';
 
 class InfoTake extends StatefulWidget {
   const InfoTake({super.key});
@@ -298,6 +299,11 @@ class _InfoTakeState extends State<InfoTake> {
                         ),
                       );
                     }
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ActivityRecognitionApp()),
+                    );
                   },
                   child: const Text('Submit'),
                 ),
