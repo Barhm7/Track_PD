@@ -2,8 +2,10 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:activity_recognition_flutter/activity_recognition_flutter.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 void main() => runApp(new ActivityRecognitionApp());
 
@@ -16,6 +18,7 @@ class _ActivityRecognitionAppState extends State<ActivityRecognitionApp> {
   StreamSubscription<ActivityEvent>? activityStreamSubscription;
   List<ActivityEvent> _events = [];
   ActivityRecognition activityRecognition = ActivityRecognition();
+  final user = FirebaseAuth.instance.currentUser;
 
   @override
   void initState() {
@@ -48,6 +51,10 @@ class _ActivityRecognitionAppState extends State<ActivityRecognitionApp> {
     activityStreamSubscription = activityRecognition
         .activityStream(runForegroundService: true)
         .listen(onData, onError: onError);
+
+    Timer.periodic(Duration(minutes: 1), (timer) {
+      _storeActivityInFirestore();
+    });
   }
 
   void onData(ActivityEvent activityEvent) {
@@ -59,6 +66,31 @@ class _ActivityRecognitionAppState extends State<ActivityRecognitionApp> {
 
   void onError(Object error) {
     print('ERROR - $error');
+  }
+
+  Future<void> _storeActivityInFirestore() async {
+    // Get the current user ID
+    final userId = FirebaseAuth.instance.currentUser!.uid;
+
+    // Get the current timestamp
+    final timestamp = DateTime.now();
+
+    // Get the latest activity event
+    final latestActivity = _events.last;
+
+    // Create a Firestore document with the activity data
+    final doc = FirebaseFirestore.instance
+        .collection('users')
+        .doc(userId)
+        .collection('activity')
+        .doc(timestamp.toString());
+
+    await doc.set({
+      'activityType': latestActivity.type.toString(),
+      'confidence': latestActivity.confidence,
+      'timestamp': timestamp,
+    });
+    print('Activity stored in Firestore: $latestActivity');
   }
 
   @override
