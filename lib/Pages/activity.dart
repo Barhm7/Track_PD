@@ -84,12 +84,12 @@ class _ActivityRecognitionAppState extends State<ActivityRecognitionApp> {
         .doc(userId)
         .collection('activity')
         .doc(timestamp.toString());
-
     await doc.set({
       'activityType': latestActivity.type.toString(),
       'confidence': latestActivity.confidence,
       'timestamp': timestamp,
     });
+
     print('Activity stored in Firestore: $latestActivity');
   }
 

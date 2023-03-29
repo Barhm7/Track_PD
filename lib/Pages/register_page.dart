@@ -39,7 +39,7 @@ class _RegisterPageState extends State<RegisterPage> {
       context,
       MaterialPageRoute(builder: (context) => const InfoTake()),
     );
-    //try creat the user
+    // try creat the user
     try {
       //check if pass confirm
       if (passwordController.text == confirmPasswordController.text) {
